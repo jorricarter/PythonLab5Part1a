@@ -1,4 +1,0 @@
-{
-  "/movies\\?t=:t": "/movies?Title=:t",
-  "/movies\\?t=:t&apikey=:key": "/movies?Title=:t&apikey=:key"
-}
