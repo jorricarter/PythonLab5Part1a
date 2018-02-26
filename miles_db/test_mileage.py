@@ -19,13 +19,14 @@ class TestMileageDB(TestCase):
         conn.execute('DELETE FROM miles')
         conn.commit()
         conn.close()
-
-    def test_add_new_vehicle(self):
+# I wrote this part without a compiler after I completed my 'last' commit so
+# if my code doesn't work, please use commit before this.
+    def test_add_new_vehicle_check_name_AND_case_AND_mileage(self):
         mileage.add_miles('Blue Car', 100)
         expected = {'BLUE CAR': 100}
         self.compare_db_to_expected(expected)
 
-        mileage.add_miles('Green Car', 50)
+        mileage.add_miles('GrEeN cAr', 50)
         expected['GREEN CAR'] = 50
         self.compare_db_to_expected(expected)
 
